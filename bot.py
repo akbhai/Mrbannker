@@ -24,7 +24,7 @@ ANTISPAM = int(os.getenv('ANTISPAM', CONFIG['antispam']))
 
 # Initialize bot and dispatcher
 storage = MemoryStorage()
-bot = Bot(token=TOKEN, parse_mode=types.ParseMode.HTML)
+bot = Bot(token=8027446535:AAFFznr39l-PkbQ3M4vCX7JBnjkB3nmzJO8, parse_mode=types.ParseMode.HTML)
 dp = Dispatcher(bot, storage=storage)
 
 # Configure logging
@@ -34,9 +34,9 @@ logging.basicConfig(level=logging.INFO)
 loop = asyncio.get_event_loop()
 
 bot_info = loop.run_until_complete(bot.get_me())
-BOT_USERNAME = bot_info.username
-BOT_NAME = bot_info.first_name
-BOT_ID = bot_info.id
+BOT_USERNAME = bot_info.@Cc_kiiller_bot
+BOT_NAME = bot_info.Cc_killer_bot
+BOT_ID = bot_info.8027446535
 
 # USE YOUR ROTATING PROXY API IN DICT FORMAT http://user:pass@providerhost:port
 proxies = {
@@ -56,7 +56,7 @@ Email = f'{First}.{Last}@gmail.com'
 UA = 'Mozilla/5.0 (X11; Linux i686; rv:102.0) Gecko/20100101 Firefox/102.0'
 
 
-async def is_owner(user_id):
+async def is_owner(562735329):
     return user_id == OWNER
 
 async def is_card_valid(card_number: str) -> bool: return (sum( map(lambda n: n[1] + (n[0] % 2 == 0) * (n[1] - 9 * (n[1] > 4)), enumerate(map(int, card_number[:-1]))) ) + int(card_number[-1])) % 10 == 0
@@ -71,7 +71,7 @@ async def helpstr(message: types.Message):
     FIRST = message.from_user.first_name
     MSG = f'''
 Hello {FIRST}, Im {BOT_NAME}
-U can find my Boss  <a href="tg://user?id={OWNER}">HERE</a>
+U can find my Boss  <a href="tg://user?id={562735329}">HERE</a>
 Cmds /chk /info /bin'''
     await message.answer(MSG, reply_markup=keyboard_markup,
                         disable_web_page_preview=True)
@@ -96,7 +96,7 @@ async def info(message: types.Message):
 <b>USERNAME:</b> @{username}
 <b>FIRSTNAME:</b> {first}
 <b>BOT:</b> {is_bot}
-<b>BOT-OWNER:</b> {await is_owner(user_id)}
+<b>BOT-OWNER:</b> {await is_owner(562735329)}
 ╘═════════''')
 
 
